@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.934" height="17.81" viewBox="0 0 24.934 17.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b5269;
+      }
+    </style>
+  </defs>
+  <g id="mail_1_" data-name="mail (1)" transform="translate(0 -68.267)">
+    <g id="Group_8" data-name="Group 8" transform="translate(0 68.267)">
+      <path id="Path_7" data-name="Path 7" class="cls-1" d="M24.044,68.267H.891a.89.89,0,0,0-.891.89V85.186a.891.891,0,0,0,.891.891H24.044a.891.891,0,0,0,.891-.891V69.157A.89.89,0,0,0,24.044,68.267Zm-1.46,1.781L12.467,77.829,2.351,70.048Zm.57,14.248H1.781V71.857l10.144,7.8a.89.89,0,0,0,1.085,0l10.144-7.8Z" transform="translate(0 -68.267)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.346" height="22.38" viewBox="0 0 20.346 22.38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b5269;
+      }
+    </style>
+  </defs>
+  <g id="bell" transform="translate(-23.272)">
+    <g id="Group_9" data-name="Group 9" transform="translate(23.272)">
+      <path id="Path_8" data-name="Path 8" class="cls-1" d="M42.6,16.276H41.583V8.138a8.138,8.138,0,0,0-16.276,0v8.138H24.289a1.017,1.017,0,0,0,0,2.035h5.086a4.069,4.069,0,0,0,8.138,0H42.6a1.017,1.017,0,1,0,0-2.035Zm-9.155,4.069a2.037,2.037,0,0,1-2.035-2.035h4.069A2.037,2.037,0,0,1,33.445,20.345Zm6.1-4.069H27.341V8.138a6.1,6.1,0,1,1,12.207,0Z" transform="translate(-23.272)"/>
+    </g>
+  </g>
+</svg>

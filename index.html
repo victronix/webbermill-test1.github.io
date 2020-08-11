@@ -1,1 +1,983 @@
-Hello World
+<html>
+
+<head>
+    <title>Hello Victronix</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <link href='https://fonts.google.com/download?family=Mulish' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["Jan", 8.94, "#455eee"],
+                ["Feb", 10.49, "#455eee"],
+                ["Mar", 89.30, "#455eee"],
+                ["Apr", 71.45, "color: #455eee"],
+                ["May", 61.45, "color: #455eee"],
+                ["Jun", 71.45, "color: #455eee"],
+                ["Jul", 91.45, "color: #455eee"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                // width: 300,
+                height: 180,
+                bar: { groupWidth: "20%" },
+                // legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f0f5fb;
+            font-family: 'Mulish', sans-serif !important;
+        }
+
+        .header {
+            height: 100px;
+            flex-direction: row;
+        }
+
+        .header-sub-1 {
+            padding: 10px;
+            background-color: #192354;
+        }
+
+        .header-sub-2 {
+            flex-direction: column;
+        }
+
+        .header-sub-div-1 {
+            background-color: #1e2b6f;
+            height: 50px;
+        }
+
+        .header-sub-div-2 {
+            flex-direction: row;
+            background-color: #3d56e6;
+            height: 50px
+        }
+
+        .header-sub-div-2-container {
+            width: 100%;
+        }
+
+        .header-sub-div-2-item {
+            padding-top: 7px;
+            background-color: #455eee;
+            border-color: #455eee;
+        }
+
+        .header-sub-div-2-item-2 {
+            padding-top: 7px;
+            background-color: #364dcd;
+            border-color: #364dcd;
+        }
+
+        .item-text-1 {
+            color: white;
+            font-size: 13px;
+        }
+
+        .item-text-2 {
+            color: #77d7c4;
+            font-size: x-small;
+        }
+
+        .item-text-3 {
+            color: #b8c1f3;
+            font-size: 13px;
+        }
+
+        .header-sub-section-1 {
+            padding: 5px;
+        }
+
+        .circle-avatar {
+            background-color: #243378;
+            border-color: #243378;
+            height: 35px;
+            width: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+        }
+
+        .circle-avatar p {
+            margin: 0;
+            color: #b8c1f3;
+            font-size: 18px;
+        }
+
+        .logout-fas {
+            color: white;
+            font-size: 12px;
+        }
+
+        .logout {
+            color: #39489c;
+            font-size: 12px;
+        }
+
+        .logout2 {
+            color: #39489c;
+            font-size: 12px;
+        }
+
+        .home-icon {
+            width: 20px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        .header-sub-content {
+            margin-bottom: 30px;
+        }
+
+
+
+        .section-1 {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .enquiry-card {
+            color: #252527;
+            font-size: 13px;
+        }
+
+        .card1 {
+            padding: 8px;
+            background-color: #eeeaff;
+            border-color: #eeeaff !important;
+            border-bottom-width: 4px !important;
+            border-bottom-color: #9583df !important;
+        }
+
+        .card-title1>h5,
+        .card-text1>span {
+            font-size: 13px;
+            color: #5d44c9;
+            font-weight: 400;
+        }
+
+        .card2 {
+            padding: 8px;
+            background-color: #e2f5ff;
+            border-color: #e2f5ff !important;
+            border-bottom-width: 4px !important;
+            border-bottom-color: #7ebbd3 !important;
+        }
+
+        .card-title2>h5,
+        .card-text2>span {
+            font-size: 13px;
+            color: #78c3e4;
+            font-weight: 400;
+        }
+
+        .card3 {
+            padding: 8px;
+            background-color: #e0f3e7;
+            border-color: #e0f3e7 !important;
+            border-bottom-width: 4px !important;
+            border-bottom-color: #80b892 !important;
+        }
+
+        .card-title3>h5,
+        .card-text3>span {
+            font-size: 13px;
+            color: #5dbb7d;
+            font-weight: 400;
+        }
+
+        .section-2 {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .webbermill-text-input {
+            background-color: #f1f5ff;
+            border-style: none;
+            border-color: #f1f5ff;
+            border-radius: 4px;
+            height: 30px;
+            /* margin-left: 30px; */
+        }
+
+        .webbermill-text-area {
+            background-color: #f1f5ff;
+            border-style: none;
+            border-color: #f1f5ff;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        .webbermill-text-label {
+            color: grey;
+            font-size: 14px;
+        }
+
+        .webbermill-formgroup {
+            padding: 0
+        }
+
+        .webbermill-group2 {
+            float: left;
+        }
+
+        .webbermill-btn {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .webbermill-btn-1 {
+            height: 30px;
+            font-size: 13px;
+            padding: 4px 7px 4px 7px;
+            background-color: #455eee !important;
+        }
+
+        .webbermill-btn-0 {
+            height: 30px;
+            font-size: 13px;
+            padding: 4px 7px 4px 7px;
+            background-color: grey !important;
+            color: white
+        }
+
+        .pagination>li>a {
+            margin-top: 4px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border-color: white;
+            display: flex;
+            /* or inline-flex */
+            align-items: center;
+            justify-content: center;
+        }
+
+        span>.page-link {
+            border: none;
+            font-size: 14px;
+        }
+
+        span>.page-link>span .fas {
+            font-size: 10px;
+        }
+
+        .page-item a {
+            color: #272626
+        }
+
+        .page-item a:hover {
+            border-color: whitesmoke !important
+        }
+
+        .page-item.active a {
+            margin-top: 4px;
+            width: 25px;
+            height: 25px;
+            background-color: black !important;
+            border-color: black !important;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            /* or inline-flex */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .table td,
+        .table th {
+            font-size: 14px;
+            color: grey;
+            font-weight: normal;
+        }
+
+        .webbermil-container {
+            margin-left: 100px;
+            margin-right: 100px;
+            width: 100%;
+        }
+
+        .webbermill-card {
+            margin-bottom: 0 !important;
+        }
+
+        .webbermill-table-heading {
+            font-size: 14px;
+            margin-bottom: 0 !important;
+        }
+
+        .section-task {
+            padding: 8px;
+            background-color: #eeeaff;
+            border-color: #eeeaff !important;
+            border-left-width: 4px !important;
+            border-left-color: #9583df !important;
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 10px;
+            margin-top: 15px !important
+        }
+
+        .section-task-2 {
+            padding: 8px;
+            background-color: #eeeaff;
+            border-color: #eeeaff !important;
+            border-left-width: 4px !important;
+            border-left-color: #9583df !important;
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border-radius: 10px;
+            margin-top: 15px !important
+        }
+
+        .section-title {
+            margin-top: 10px;
+            padding: 0 !important
+        }
+
+        .section-title h4 {
+            font-size: small;
+            font-weight: bold;
+        }
+
+        .card-title-default>h5 {
+            font-size: 13px;
+            color: black;
+            font-weight: 400;
+        }
+
+        .card-title-default>p {
+            font-size: small !important;
+            color: grey
+        }
+
+        .notification-section {
+            margin-top: 20px;
+        }
+        .webbermill-footer {
+            background-color: #ededed;
+            padding: 20px 0px 0px 20px;
+            margin-top: 15px
+        }
+        .webbermill-footer p {
+            font-size: small;
+            color: #818181
+        }
+        .webbermil-container > p  .fa-circle {
+            font-size: smaller;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row header">
+            <div class="col-md-3 header-sub-1">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="circle-avatar">
+                            <p>b</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8 header-sub-section-1">
+                        <div class="header-sub-content">
+                            <span class="logout-fas"> <i class="fas fa-long-arrow-alt-left fa-fw"></i> <span
+                                    class="logout">Logout</span></span>
+                        </div>
+                        <div>
+                            <span class="logout">
+                                <img src="./menu_icon.svg" class="home-icon" alt="">
+                                <span class="logout2">
+                                    <span class="logout-fas">Menu /</span> Dashboard
+                                    <span class="fas fa-fw fa-chevron-down"
+                                        style="color: white; font-size: x-small;"></span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 header-sub-2">
+                <div class="row header-sub-div-1"></div>
+                <div class="row header-sub-div-2">
+                    <div class="d-flex justify-content-between header-sub-div-2-container">
+                        <div class="col-md-4 header-sub-div-2-item d-flex justify-content-between align-items-center">
+                            <p class="item-text-1">Vistor Management</p>
+                            <p class="item-text-2">Last vist 5 minutes ago</p>
+                        </div>
+                        <div class="col-md-3 header-sub-div-2-item d-flex justify-content-between align-items-center">
+                            <p class="item-text-3">Schedule Meeting</p>
+                        </div>
+                        <div class="col-md-4 header-sub-div-2-item-2 d-flex justify-content-between align-items-center">
+                            <p class="item-text-3">Enquiry Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="col-md-12">
+                    <div class="row section-2">
+                        <div class="webbermil-container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="header-sub-content d-flex justify-content-end">
+                                        <span>
+                                            <i class="fas fa-long-arrow-alt-left fa-fw"></i>
+                                            <span class="enquiry-card">Enquiry Management
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card card1">
+                                                <div class="row">
+                                                    <div class="col-md-12" style="flex-direction: row;">
+                                                        <div
+                                                            class="d-flex flex-column bd-highlight mb-3 webbermill-card">
+                                                            <div class="">
+                                                                <div class="card-title1">
+                                                                    <h5>All Received</h5>
+                                                                </div>
+                                                                <div class="card-text1">
+                                                                    <span>590</span>
+                                                                    <img style="float:right" src="./profit.svg" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card2">
+                                                <div class="row">
+                                                    <div class="col-md-12" style="flex-direction: row;">
+                                                        <div
+                                                            class="d-flex flex-column bd-highlight mb-3 webbermill-card">
+                                                            <div class="">
+                                                                <div class="card-title2">
+                                                                    <h5>New Enquiries</h5>
+                                                                </div>
+                                                                <div class="card-text2">
+                                                                    <span>220</span>
+                                                                    <img style="float:right" src="./new.svg" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card2">
+                                                <div class="row">
+                                                    <div class="col-md-12" style="flex-direction: row;">
+                                                        <div
+                                                            class="d-flex flex-column bd-highlight mb-3 webbermill-card">
+                                                            <div class="">
+                                                                <div class="card-title3">
+                                                                    <h5>Active Enquiries</h5>
+                                                                </div>
+                                                                <div class="card-text3">
+                                                                    <span>360</span>
+                                                                    <img style="float:right" src="./activity.svg"
+                                                                        alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row section-2">
+                        <div class="webbermil-container">
+                            <div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4 pull-left">
+                                                        <label
+                                                            class="control-label webbermill-text-label">Fullname</label>
+                                                    </div>
+                                                    <div class="col-md-8 webbermill-formgroup ">
+                                                        <input type="text" class="form-control webbermill-text-input"
+                                                            id="tottax" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4 pull-left">
+                                                        <label class="control-label webbermill-text-label">Email</label>
+                                                    </div>
+                                                    <div class="col-md-8 webbermill-formgroup ">
+                                                        <input type="text" class="form-control webbermill-text-input"
+                                                            id="tottax" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4 pull-left">
+                                                        <label
+                                                            class="control-label webbermill-text-label">Detail</label>
+                                                    </div>
+                                                    <div class="col-md-8 webbermill-formgroup ">
+                                                        <textarea style="overflow:hidden"
+                                                            class="form-control webbermill-text-area" name="" id=""
+                                                            cols="30" rows="1">
+
+                                                </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4 pull-left">
+                                                        <label
+                                                            class="control-label webbermill-text-label">Service</label>
+                                                    </div>
+                                                    <div class="col-md-8 webbermill-formgroup ">
+                                                        <input type="text" class="form-control webbermill-text-input"
+                                                            id="tottax" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-4 pull-left">
+                                                        <label class="control-label webbermill-text-label">Phone</label>
+                                                    </div>
+                                                    <div class="col-md-8 webbermill-formgroup ">
+                                                        <input type="text" class="form-control webbermill-text-input"
+                                                            id="tottax" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="padding: 0">
+                                            <div class="d-flex flex-row-reverse">
+                                                <button class="btn btn-primary webbermill-btn-1">Add Enquiry</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row section-2">
+                        <div class="webbermil-container row">
+                            <div class="col-md-12">
+                                <div class="row" style="margin: 10px 0px 30px 0px;">
+                                    <div class="col-md-8 d-flex align-items-end">
+                                        <h5 class="webbermill-table-heading">All Enquiries</h5>
+                                    </div>
+                                    <div class="col-md-4" style="padding: 0">
+                                        <button class="btn btn-default webbermill-btn webbermill-btn-0">Print
+                                            History</button>
+                                        <button class="btn btn-primary webbermill-btn webbermill-btn-1">Export
+                                            File</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#Item</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Service</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Emails</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Messages</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="col-md-12" style="padding: 0">
+                                <nav aria-label="Page navigation example" style="float: right">
+                                    <ul class="pagination">
+                                        <!-- d-flex justify-content-between -->
+                                        <li class="page-item">
+                                            <span>
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true"><span class="fas fa-chevron-left"
+                                                            style="margin-right: 10px"></span> Prev</span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <span>
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">Next <span class="fas fa-chevron-right"
+                                                            style="margin-left: 10px"></span></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="notification-section">
+                    <div class="d-flex flex-row-reverse">
+                        <span class="logout">
+                            <img src="./mail (1).svg" class="home-icon" alt="">
+                            <img src="./bell.svg" class="home-icon" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="row section-1">
+                    <div class="container theme-showcase">
+                        <h5>Calendar</h5>
+                        <div id="holder" class="row"></div>
+                    </div>
+                </div>
+                <div class="row section-title">
+                    <h4>Your Task</h4>
+                </div>
+                <div class="row section-task">
+                    <div class="row">
+                        <div class="col-md-12" style="flex-direction: row;">
+                            <div class="d-flex flex-column bd-highlight mb-3 webbermill-card">
+                                <div class="">
+                                    <div class="card-title-default">
+                                        <h5>Review The health core app with team</h5>
+                                        <p><span class="fas fa-clock"></span> 7 Dec, 2019| 10:00am</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row section-title">
+                    <h4>Vistor Performance</h4>
+                </div>
+                <div class="row section-task-2">
+                    <div class="row">
+                        <div class="col-md-12" style="flex-direction: row;">
+                            <div id="columnchart_values"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/tmpl" id="tmpl">
+            {{ 
+            var date = date || new Date(),
+                month = date.getMonth(), 
+                year = date.getFullYear(), 
+                first = new Date(year, month, 1), 
+                last = new Date(year, month + 1, 0),
+                startingDay = first.getDay(), 
+                thedate = new Date(year, month, 1 - startingDay),
+                dayclass = lastmonthcss,
+                today = new Date(),
+                i, j; 
+            if (mode === 'week') {
+              thedate = new Date(date);
+              thedate.setDate(date.getDate() - date.getDay());
+              first = new Date(thedate);
+              last = new Date(thedate);
+              last.setDate(last.getDate()+6);
+            } else if (mode === 'day') {
+              thedate = new Date(date);
+              first = new Date(thedate);
+              last = new Date(thedate);
+              last.setDate(thedate.getDate() + 1);
+            }
+            
+            }}
+            <table>
+              <thead>
+                <tr>
+                  <td colspan="7" style="text-align: center">
+                    <table style="white-space: nowrap; width: 100%">
+                      <tr>
+                        <td style="text-align: left;">
+                          <span class="btn-group">
+                          </span>
+                        </td>
+                        <span class="webbermill btn-group">
+                          <span class="js-cal-option btn btn-default {{: mode==='week'? 'active':'' }}" data-mode="week">
+                            <div class="webbermill-calendar-label">Week</div>
+                          </span>
+                          <span class="js-cal-option btn btn-default {{: mode==='month'? 'active':'' }}" data-mode="month">
+                            <div class="webbermill-calendar-label">Month</div>
+                          </span>
+                          <span class="js-cal-option btn btn-default {{: mode==='year'? 'active':'' }}" data-mode="year">
+                            <div class="webbermill-calendar-label">Year</div>
+                          </span>
+                        <td>
+                          <div class="row" style="margin-top: 15px">
+                            <div class="col-md-4">
+                                <span style="float: left" class="js-cal-next btn btn-default">
+                                    <span class="fas fa-chevron-left btn btn-default"></span>
+                                  </span>
+                              </div>
+                              <div class="col-md-4">
+                                <span class="btn-group btn-group-lg">
+                                  {{ if (mode !== 'day') { }}
+                                    {{ if (mode === 'month') { }}<button class="js-cal-option btn btn-link" data-mode="year">{{: months[month] }}</button>{{ } }}
+                                    {{ if (mode ==='week') { }}
+                                      <button class="btn btn-link disabled">{{: shortMonths[first.getMonth()] }} {{: first.getDate() }} - {{: shortMonths[last.getMonth()] }} {{: last.getDate() }}</button>
+                                    {{ } }}
+                                  {{ } else { }}
+                                    <button class="btn btn-link disabled">{{: date.toDateString() }}</button> 
+                                  {{ } }}
+                                </span>
+                              </div>
+                              <div class="col-md-4">
+                                <span style="float: right" class="js-cal-next btn btn-default">
+                                    <span class="fas fa-chevron-right btn btn-default"></span>
+                                  </span>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                  </td>
+                </tr>
+              </thead>
+              {{ if (mode ==='year') {
+                month = 0;
+              }}
+              <tbody>
+                {{ for (j = 0; j < 3; j++) { }}
+                <tr>
+                  {{ for (i = 0; i < 4; i++) { }}
+                  <td class="calendar-month month-{{:month}} js-cal-option" data-date="{{: new Date(year, month, 1).toISOString() }}" data-mode="month">
+                    {{: months[month] }}
+                    {{ month++;}}
+                  </td>
+                  {{ } }}
+                </tr>
+                {{ } }}
+              </tbody>
+              {{ } }}
+              {{ if (mode ==='month' || mode ==='week') { }}
+              <thead>
+                <tr class="c-weeks">
+                  {{ for (i = 0; i < 7; i++) { }}
+                    <th class="c-name">
+                      {{: days[i] }}
+                    </th>
+                  {{ } }}
+                </tr>
+              </thead>
+              <tbody>
+                {{ for (j = 0; j < 6 && (j < 1 || mode === 'month'); j++) { }}
+                <tr>
+                  {{ for (i = 0; i < 7; i++) { }}
+                  {{ if (thedate > last) { dayclass = nextmonthcss; } else if (thedate >= first) { dayclass = thismonthcss; } }}
+                  <td class="calendar-day {{: dayclass }} {{: thedate.toDateCssClass() }} {{: date.toDateCssClass() === thedate.toDateCssClass() ? 'selected':'' }} {{: daycss[i] }} js-cal-option" data-date="{{: thedate.toISOString() }}">
+                    <div class="date">{{: thedate.getDate() }}</div>
+                    {{ thedate.setDate(thedate.getDate() + 1);}}
+                  </td>
+                  {{ } }}
+                </tr>
+                {{ } }}
+              </tbody>
+              {{ } }}
+              {{ if (mode ==='day') { }}
+              <tbody>
+                <tr>
+                  <td colspan="7">
+                    <table class="" >
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th style="text-align: center; width: 100%">{{: days[date.getDay()] }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th class="timetitle" >All Day</th>
+                          <td class="{{: date.toDateCssClass() }}">  </td>
+                        </tr>
+                        <tr>
+                          <th class="timetitle" >Before 6 AM</th>
+                          <td class="time-0-0"> </td>
+                        </tr>
+                        {{for (i = 6; i < 22; i++) { }}
+                        <tr>
+                          <th class="timetitle" >{{: i <= 12 ? i : i - 12 }} {{: i < 12 ? "AM" : "PM"}}</th>
+                          <td class="time-{{: i}}-0"> </td>
+                        </tr>
+                        <tr>
+                          <th class="timetitle" >{{: i <= 12 ? i : i - 12 }}:30 {{: i < 12 ? "AM" : "PM"}}</th>
+                          <td class="time-{{: i}}-30"> </td>
+                        </tr>
+                        {{ } }}
+                        <tr>
+                          <th class="timetitle" >After 10 PM</th>
+                          <td class="time-22-0"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              {{ } }}
+            </table>
+          </script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+        <script src="./script.js"></script>
+        <footer>
+            <div class="row webbermill-footer">
+                <div class="webbermil-container">
+                    <p>COPYRIGHT 
+                        <span>&#169;</span>
+                         2020 
+                         <span class="fas fa-circle"></span>
+                          ATEWA PRODUCT
+                    </p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

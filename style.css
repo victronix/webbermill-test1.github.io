@@ -1,0 +1,155 @@
+.calendar-day {
+  width: 45px;
+  min-width: 45px;
+  max-width: 45px;
+  height: 20px;
+}
+.calendar-table {
+  /* margin: 0 auto; */
+  /* width: 700px; */
+}
+.selected {
+  background-color: #eee;
+}
+.outside .date {
+  color: #ccc;
+}
+.timetitle {
+  white-space: nowrap;
+  text-align: right;
+}
+.event {
+  border-top: 1px solid #b2dba1;
+  border-bottom: 1px solid #b2dba1;
+  background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
+  background-repeat: repeat-x;
+  color: #3c763d;
+  border-width: 1px;
+  font-size: 0.75em;
+  padding: 0 0.75em;
+  line-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1px;
+}
+.event.begin {
+  border-left: 1px solid #b2dba1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.event.end {
+  border-right: 1px solid #b2dba1;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.event.all-day {
+  border-top: 1px solid #9acfea;
+  border-bottom: 1px solid #9acfea;
+  background-image: linear-gradient(to bottom, #d9edf7 0px, #b9def0 100%);
+  background-repeat: repeat-x;
+  color: #31708f;
+  border-width: 1px;
+}
+.event.all-day.begin {
+  border-left: 1px solid #9acfea !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+.event.all-day.end {
+  border-right: 1px solid #9acfea !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+.event.clear {
+  background: none; !important
+  border: 1px solid transparent !important;
+}
+.table-tight > thead > tr > th,
+.table-tight > tbody > tr > th,
+.table-tight > tfoot > tr > th,
+.table-tight > thead > tr > td,
+.table-tight > tbody > tr > td,
+.table-tight > tfoot > tr > td {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.table-tight-vert > thead > tr > th,
+.table-tight-vert > tbody > tr > th,
+.table-tight-vert > tfoot > tr > th,
+.table-tight-vert > thead > tr > td,
+.table-tight-vert > tbody > tr > td,
+.table-tight-vert > tfoot > tr > td {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.webbermill.btn-group {
+  background-color: #f1f5ff !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.js-cal-option.btn.btn-default {
+  border-radius: 15px !important;
+  width: 32% !important;
+}
+
+
+.webbermill.btn-group  >  .js-cal-option.btn.btn-default {
+  background-image: none !important;
+  background-color: inherit !important;
+  /* width: 33.3% !important; */
+  border: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important
+}
+
+.js-cal-option.btn.btn-default.active {
+  background-color: #f1f5ff !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-style: none !important;
+  border-radius: none !important;
+  box-shadow: none !important;
+}
+.js-cal-option.btn.btn-default.active > div{
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #455eee !important;
+  border-radius: 15px !important;
+  /* width: 100% !important; */
+  height: 28px !important;
+  padding-top: 3px !important;
+}
+
+.webbermill-calendar-label{
+  font-size: small !important;
+}
+
+.webbermill.btn-group{
+  border-radius: 15px;
+}
+
+.calendar-day {
+  font-size: small !important;
+}
+
+.fas.btn.btn-default{
+  font-size: small !important;
+}
+.btn-group.btn-group-lg > .js-cal-option.btn.btn-link{
+  font-size: small !important;
+}
+
+.container.theme-showcase > h5 {
+  font-size: small !important;
+}
+
+.c-weeks > .c-name {
+  font-size: small !important;
+}
+
+.canvasjs-chart-credit{
+  display: none !important;
+}
